@@ -32,7 +32,8 @@
 
 1. 在modelscope-GPU环境可直接运行，在其他环境下还需`pip3 install modelscope`；
 2. embedding模型选择`bge-large-zh-v1.5`，对新闻标题进行表征，以此进行聚类；
-3. DBSCAN的超参选择方面，metric选择cosine距离、eps选择0.4-0.45、min_samples=2。其中eps越大，越能包含“相关”新闻；eps越小，越只能包含“相同”新闻。
+3. DBSCAN的超参选择方面，metric选择cosine距离、eps选择0.4-0.45、min_samples=2。其中eps越大，越能包含“相关”新闻；eps越小，越只能包含“相同”新闻；
+4. 解析url使用了`unstructured`，此库依赖[nltk_data](http://www.nltk.org/nltk_data/)中的punkt、averaged_perceptron_tagge，如果nltk下载慢，建议直接使用下载好的punkt、averaged_perceptron_tagge（本项目source目录下已下载好，可直接用）。
 
 感兴趣的读者可以读[这篇博文]()，以了解更多细节。
 
