@@ -15,8 +15,7 @@
 说明：
 
 1. 在modelscope-GPU环境可直接运行，所需依赖的库已在jupyter中指明，在其他环境下还需`pip3 install modelscope`；
-2. embedding模型选择`bge-large-zh-v1.5`；
-3. 在GPU上大约需消耗2G显存，CPU也能跑但是贼慢。
+2. 在GPU上大约需消耗2G显存，CPU也能跑但是贼慢。
 
 感兴趣的读者可以读[这篇博文]()，以了解更多细节。
 
@@ -26,14 +25,13 @@
 
 `embedding_news_clustering.ipynb`
 
-将几个微信公众号的早报新闻进行DBSCAN聚类，以聚合相同、相关的新闻。
+将几个微信公众号的早报新闻解析为（title，passages）格式，随后使用`bge-large-zh-v1.5`对title进行表征，最后进行DBSCAN聚类，以聚合相同、相关的新闻。
 
 说明：
 
 1. 在modelscope-GPU环境可直接运行，所需依赖的库已在jupyter中指明，在其他环境下还需`pip3 install modelscope`；
-2. embedding模型选择`bge-large-zh-v1.5`，对新闻标题进行表征，以此进行聚类；
-3. DBSCAN的超参选择方面，metric选择cosine距离、eps选择0.4-0.45、min_samples=2。其中eps越大，越能包含“相关”新闻；eps越小，越只能包含“相同”新闻；
-4. 解析url使用了`unstructured`，此库依赖[nltk_data](http://www.nltk.org/nltk_data/)中的punkt、averaged_perceptron_tagge，如果nltk下载慢，建议直接使用下载好的punkt、averaged_perceptron_tagge（本项目source目录下已下载好，可直接用）。
+2. DBSCAN的超参选择方面，metric选择cosine距离、eps选择0.4-0.45、min_samples=2。其中eps越大，越能包含“相关”新闻；eps越小，越只能包含“相同”新闻；
+3. 解析url使用了`unstructured`，此库依赖[nltk_data](http://www.nltk.org/nltk_data/)中的punkt、averaged_perceptron_tagge，如果nltk下载慢，建议直接使用下载好的punkt、averaged_perceptron_tagge（本项目source目录下已下载好，可直接用）。
 
 感兴趣的读者可以读[这篇博文]()，以了解更多细节。
 
