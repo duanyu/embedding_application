@@ -17,7 +17,7 @@
 1. 在modelscope-GPU环境可直接运行，所需依赖的库已在jupyter中指明，在其他环境下还需`pip3 install modelscope`；
 2. 在GPU上大约需消耗2G显存，CPU也能跑但是贼慢。
 
-感兴趣的读者可以读[这篇博文]()，以了解更多细节。
+感兴趣的读者可以读[这篇博文](https://mp.weixin.qq.com/s?__biz=MzkwNjUyODgzMQ==&mid=2247483936&idx=1&sn=29f31ee063a1576524d916be92347a3c&chksm=c0e65370f791da665f54d6098d6f10cdb74db8913b9cf7a532b136678d3f6e7d75bfda017087&token=46985569&lang=zh_CN#rd)，以了解更多细节。
 
 # 聚类
 
@@ -33,6 +33,6 @@
 2. DBSCAN的超参选择方面，metric选择cosine距离、eps选择0.4-0.45、min_samples=2。其中eps越大，越能包含“相关”新闻；eps越小，越只能包含“相同”新闻；
 3. 解析url使用了`unstructured`，此库依赖[nltk_data](http://www.nltk.org/nltk_data/)中的punkt、averaged_perceptron_tagge，如果nltk下载慢，建议直接使用下载好的punkt、averaged_perceptron_tagge（本项目source目录下已下载好，可直接用）。
 
-感兴趣的读者可以读[这篇博文]()，以了解更多细节。
+感兴趣的读者可以读[这篇博文](https://mp.weixin.qq.com/s?__biz=MzkwNjUyODgzMQ==&mid=2247483936&idx=1&sn=29f31ee063a1576524d916be92347a3c&chksm=c0e65370f791da665f54d6098d6f10cdb74db8913b9cf7a532b136678d3f6e7d75bfda017087&token=46985569&lang=zh_CN#rd)，以了解更多细节。
 
 
